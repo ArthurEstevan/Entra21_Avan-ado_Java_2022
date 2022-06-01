@@ -1,11 +1,11 @@
-package br.com.entra21.java.avancado.principal;
+package br.com.entra21.java.advanced.main;
 
 import java.util.Iterator;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
-import br.com.entra21.java.avancado.aula_01.enums.PersonagemJogo;
+import br.com.entra21.java.advanced.class_01.enum_.gameCharacter;
 
 public class Main {
 
@@ -108,10 +108,10 @@ public class Main {
 
 		//usando meu "Enum" que foi criado dentro do package
 		//apenas mostrando as caracteristicas e vida com concatenação
-		System.out.println("Gosto desse tipo de personagem " + PersonagemJogo.ANAO);
-		System.out.println("Geralmente a classe " + PersonagemJogo.ANAO + " tem HP = " + PersonagemJogo.ANAO.getLIFE());
-		System.out.println("Caracteristica mais comum " + PersonagemJogo.ANAO.getDESCRICAO());
-		System.out.println("Veja a descrição completa do " + PersonagemJogo.DRUIADA + " | Seu HP = "+ PersonagemJogo.DRUIADA.getLIFE() + " | Sua Caracterista = " + PersonagemJogo.DRUIADA.getDESCRICAO());
+		System.out.println("Gosto desse tipo de personagem " + gameCharacter.ANAO);
+		System.out.println("Geralmente a classe " + gameCharacter.ANAO + " tem HP = " + gameCharacter.ANAO.getLIFE());
+		System.out.println("Caracteristica mais comum " + gameCharacter.ANAO.getDESCRICAO());
+		System.out.println("Veja a descrição completa do " + gameCharacter.DRUIADA + " | Seu HP = "+ gameCharacter.DRUIADA.getLIFE() + " | Sua Caracterista = " + gameCharacter.DRUIADA.getDESCRICAO());
 		System.out.println();
 		
 		//---------------------------------------------------------------------------------//
@@ -119,11 +119,11 @@ public class Main {
 		//usando meu "Enum" que foi criado dentro do package
 		//mostrando como percorer meu "Enum" dentro de um for
 		//(percorrendo as constantes, LIFE E DESCRICAO
-		for (int personagens = 0; personagens < PersonagemJogo.values().length; personagens++) {
-			System.out.println((personagens + 1) + " - " + PersonagemJogo.values()[personagens] );
-			System.out.println(" Veja a descrição completa do " + PersonagemJogo.values()[personagens]);
-			System.out.println(" | Seu HP = "+ PersonagemJogo.values()[personagens].getLIFE() );
-			System.out.println(" | Sua Caracterista = " + PersonagemJogo.values()[personagens].getDESCRICAO());
+		for (int personagens = 0; personagens < gameCharacter.values().length; personagens++) {
+			System.out.println((personagens + 1) + " - " + gameCharacter.values()[personagens] );
+			System.out.println(" Veja a descrição completa do " + gameCharacter.values()[personagens]);
+			System.out.println(" | Seu HP = "+ gameCharacter.values()[personagens].getLIFE() );
+			System.out.println(" | Sua Caracterista = " + gameCharacter.values()[personagens].getDESCRICAO());
 			System.out.println();
 		}
 		
@@ -131,12 +131,12 @@ public class Main {
 		
 		//usando meu "Enum" que foi criado dentro do package
 		//for de iteração vai de um por um, usando next.
-		for (PersonagemJogo variavel: PersonagemJogo.values()) { 
+		for (gameCharacter variavel: gameCharacter.values()) { 
 			System.out.println(variavel.ordinal()); //ordinal mostra posição que está no looping
 		}
 		
 		//mostra posição dentro do meu "Enum"
-		System.out.println("O druida está " +PersonagemJogo.DRUIADA.ordinal());
+		System.out.println("O druida está " +gameCharacter.DRUIADA.ordinal());
 	}
 
 }
