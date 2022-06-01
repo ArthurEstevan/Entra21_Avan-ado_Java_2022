@@ -9,5 +9,5 @@
 
 | CLASS | SUBJECT |
 |------|---------|
-|Class 01 - 01|[JAVA - WRAPPER ](./Aulas%20-%20Java%20Avançado/src/br/com/entra21/java/avancado/)
-|Class 01 - 02|[JAVA - ENUM ](./Aulas%20-%20Java%20Avançado/src/br/com/entra21/java/avancado/)
+|Class 01 - 01|[JAVA - WRAPPER ](./Class%20-%20Java%20Advanced/src/br/com/entra21/java/advanced/)
+|Class 01 - 02|[JAVA - ENUM ](./Class%20-%20Java%20Advanced/src/br/com/entra21/java/advanced/)
