@@ -10,4 +10,4 @@
 | CLASS | SUBJECT |
 |------|---------|
 |Class 01 - 01|[JAVA - WRAPPER ](./Class%20-%20Java%20Advanced/src/br/com/entra21/java/advanced/)
-|Class 01 - 02|[JAVA - ENUM ](./Class%20-%20Java%20Advanced/src/br/com/entra21/java/advanced/)
+|Class 01 - 02|[JAVA - ENUM ](./Class%20-%20Java%20Advanced/src/br/com/entra21/java/advanced/class_01/enum_/)
