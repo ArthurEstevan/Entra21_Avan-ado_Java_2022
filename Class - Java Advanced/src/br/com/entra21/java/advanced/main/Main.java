@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
+import br.com.entra21.java.advanced.class_01.enum_.LearningEnum;
 import br.com.entra21.java.advanced.class_01.enum_.gameCharacter;
 
 public class Main {
@@ -38,6 +39,11 @@ public class Main {
 			case 2:
 				learningENUM();
 				break;
+				
+			case 3:
+				learningCollection();
+				break;
+
 
 			default:
 				System.out.println("choose correct option");
@@ -139,4 +145,9 @@ public class Main {
 		System.out.println("O druida está " +gameCharacter.DRUIADA.ordinal());
 	}
 
+	//--------LEARNING COLLECTION--------//
+	public static void learningCollection() {
+		
+		
+	}
 }
