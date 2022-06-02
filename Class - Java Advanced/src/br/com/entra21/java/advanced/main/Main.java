@@ -7,6 +7,7 @@ import javax.swing.JOptionPane;
 
 import br.com.entra21.java.advanced.class_01.enum_.LearningEnum;
 import br.com.entra21.java.advanced.class_01.enum_.gameCharacter;
+import br.com.entra21.java.advanced.class_02.collection.LearningCollection;
 
 public class Main {
 
@@ -24,7 +25,7 @@ public class Main {
 
 		do {
 
-			System.out.println(exibirMenu());
+			System.out.print(exibirMenu());
 			option = input.nextByte();
 
 			switch (option) {
@@ -41,7 +42,7 @@ public class Main {
 				break;
 				
 			case 3:
-				learningCollection();
+				LearningCollection.Aprender();
 				break;
 
 
@@ -58,12 +59,17 @@ public class Main {
 	public static String exibirMenu() {
 
 		String menu = "";
-		menu += "Learning Advanced Concept in Java\n";
-		menu += "\t0 - Leave\n";
-		menu += "\t1 - Wrapper\n";
-		menu += "\t2 - ENUM\n";
-		menu += "Choose Option";
-
+		
+		menu += "----------------------------------------\n";
+		menu += "| Learning Advanced Concept in Java |\n";
+		menu += "----------------------------------------\n";
+		menu += "\t\t\t0 - Leave\n";
+		menu += "\t\t\t1 - Wrapper\n";
+		menu += "\t\t\t2 - ENUM\n";
+		menu += "\t\t\t3 - Collection\n";
+		menu += "----------------------------------------\n";
+		menu += "| Choose Option                                    |\n";
+		menu += "----------------------------------------\n";
 		return menu;
 
 	}
@@ -145,9 +151,5 @@ public class Main {
 		System.out.println("O druida está " +gameCharacter.DRUIADA.ordinal());
 	}
 
-	//--------LEARNING COLLECTION--------//
-	public static void learningCollection() {
-		
-		
-	}
 }
+
