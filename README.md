@@ -11,4 +11,4 @@
 |------|---------|
 |Class 01 - 01|[JAVA - WRAPPER ](./Class%20-%20Java%20Advanced/src/br/com/entra21/java/advanced/main/)
 |Class 01 - 02|[JAVA - ENUM ](./Class%20-%20Java%20Advanced/src/br/com/entra21/java/advanced/class_01/enum_/)
-|Class 01 - 01|[JAVA - ENUM ](./Class%20-%20Java%20Advanced/src/br/com/entra21/java/advanced/class_01/enum_/)
+|Class 01 - 01|[JAVA - COLLECTION ](./Class%20-%20Java%20Advanced/src/br/com/entra21/java/advanced/class_02/collection/)
