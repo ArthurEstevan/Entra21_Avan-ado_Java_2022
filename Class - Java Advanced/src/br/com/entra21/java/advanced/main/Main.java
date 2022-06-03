@@ -8,6 +8,7 @@ import javax.swing.JOptionPane;
 import br.com.entra21.java.advanced.class_01.enum_.LearningEnum;
 import br.com.entra21.java.advanced.class_01.enum_.gameCharacter;
 import br.com.entra21.java.advanced.class_02.collection.LearningCollection;
+import br.com.entra21.java.advanced.class_03.menu.MenuClass03;
 
 public class Main {
 
@@ -25,7 +26,7 @@ public class Main {
 
 		do {
 
-			System.out.print(exibirMenu());
+			System.out.println(exibirMenu());
 			option = input.nextByte();
 
 			switch (option) {
@@ -44,6 +45,11 @@ public class Main {
 			case 3:
 				LearningCollection.Aprender();
 				break;
+				
+			case 4:
+				MenuClass03.aprender();
+				break;
+
 
 
 			default:
@@ -60,16 +66,14 @@ public class Main {
 
 		String menu = "";
 		
-		menu += "----------------------------------------\n";
-		menu += "| Learning Advanced Concept in Java |\n";
-		menu += "----------------------------------------\n";
-		menu += "\t\t\t0 - Leave\n";
-		menu += "\t\t\t1 - Wrapper\n";
-		menu += "\t\t\t2 - ENUM\n";
-		menu += "\t\t\t3 - Collection\n";
-		menu += "----------------------------------------\n";
-		menu += "| Choose Option                                    |\n";
-		menu += "----------------------------------------\n";
+
+		menu += "Learning Advanced Concept in Java\n";
+		menu += "0 - Leave\n";
+		menu += "1 - Wrapper\n";
+		menu += "2 - ENUM\n";
+		menu += "3 - Collection\n";
+		menu += "4 - Collection";
+		menu += "Choose Option";
 		return menu;
 
 	}
@@ -115,41 +119,7 @@ public class Main {
 		for (int dias = 0; dias < DiasSemana.values().length; dias++) {
 			System.out.println((dias + 1) + " - " + DiasSemana.values()[dias]);
 		}
-		
-		//---------------------------------------------------------------------------------//
-
-		//usando meu "Enum" que foi criado dentro do package
-		//apenas mostrando as caracteristicas e vida com concatenação
-		System.out.println("Gosto desse tipo de personagem " + gameCharacter.ANAO);
-		System.out.println("Geralmente a classe " + gameCharacter.ANAO + " tem HP = " + gameCharacter.ANAO.getLIFE());
-		System.out.println("Caracteristica mais comum " + gameCharacter.ANAO.getDESCRICAO());
-		System.out.println("Veja a descrição completa do " + gameCharacter.DRUIADA + " | Seu HP = "+ gameCharacter.DRUIADA.getLIFE() + " | Sua Caracterista = " + gameCharacter.DRUIADA.getDESCRICAO());
-		System.out.println();
-		
-		//---------------------------------------------------------------------------------//
-		
-		//usando meu "Enum" que foi criado dentro do package
-		//mostrando como percorer meu "Enum" dentro de um for
-		//(percorrendo as constantes, LIFE E DESCRICAO
-		for (int personagens = 0; personagens < gameCharacter.values().length; personagens++) {
-			System.out.println((personagens + 1) + " - " + gameCharacter.values()[personagens] );
-			System.out.println(" Veja a descrição completa do " + gameCharacter.values()[personagens]);
-			System.out.println(" | Seu HP = "+ gameCharacter.values()[personagens].getLIFE() );
-			System.out.println(" | Sua Caracterista = " + gameCharacter.values()[personagens].getDESCRICAO());
-			System.out.println();
-		}
-		
-		//---------------------------------------------------------------------------------//
-		
-		//usando meu "Enum" que foi criado dentro do package
-		//for de iteração vai de um por um, usando next.
-		for (gameCharacter variavel: gameCharacter.values()) { 
-			System.out.println(variavel.ordinal()); //ordinal mostra posição que está no looping
-		}
-		
-		//mostra posição dentro do meu "Enum"
-		System.out.println("O druida está " +gameCharacter.DRUIADA.ordinal());
 	}
-
+	
 }
 

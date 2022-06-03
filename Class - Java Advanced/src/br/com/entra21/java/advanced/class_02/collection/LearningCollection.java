@@ -54,7 +54,7 @@ import java.util.Scanner;
 
 		ArrayList<String> nomes = new ArrayList<String>(); //instanciando minhas classe ArrayList
 		
-		nomes.add("Arthur"); //criando meus métodos de add
+		nomes.add("Arthur");  //criando meus métodos de add
 		nomes.add("Ariana");
 		nomes.add("Oliota");
 		nomes.add("Marcos");
