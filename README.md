@@ -9,6 +9,9 @@
 
 | CLASS | SUBJECT |
 |------|---------|
-|Class 01 - 01|[JAVA - WRAPPER ](./Class%20-%20Java%20Advanced/src/br/com/entra21/java/advanced/main/)
-|Class 01 - 02|[JAVA - ENUM ](./Class%20-%20Java%20Advanced/src/br/com/entra21/java/advanced/class_01/enum_/)
-|Class 01 - 01|[JAVA - COLLECTION ](./Class%20-%20Java%20Advanced/src/br/com/entra21/java/advanced/class_02/collection/)
+|Class 01 - 01|[WRAPPER / ENUNS](./JavaAcancado/src/br/com/entra21/java/avancado/aula01)
+|Class 02 - 01|[ARRAYLIST / LINKEDLIST](./JavaAcancado/src/br/com/entra21/java/avancado/aula02)
+|Class 03 - 01|[ANNOTATION / DATE](./JavaAcancado/src/br/com/entra21/java/avancado/aula03)
+|Class 04 - 01|[HASHSET](./JavaAcancado/src/br/com/entra21/java/avancado/aula04)
+|Class 05 - 01|[HASHMAP](./JavaAcancado/src/br/com/entra21/java/avancado/aula05)
+
