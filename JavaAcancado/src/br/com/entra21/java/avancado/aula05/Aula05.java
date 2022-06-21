@@ -44,32 +44,32 @@ public class Aula05 extends Aula {
 	private void aprenderHashMap() {
 
 		System.out.println("Caracteristicas do HashMap");
-		System.out.println("- Não possui uma ordenação natural (incremento ou alfabetica)");
-		System.out.println("- Não é ordenavel");
-		System.out.println("- Não permite duplicidades");
+		System.out.println("- Nï¿½o possui uma ordenaï¿½ï¿½o natural (incremento ou alfabetica)");
+		System.out.println("- Nï¿½o ï¿½ ordenavel");
+		System.out.println("- Nï¿½o permite duplicidades");
 
 		System.out.println("===========================");
 		HashMap<String, String> linguagens = new HashMap<>();
 
-		System.out.println("A lista está vazia ? " + (linguagens.isEmpty() ? "Sim" : "Não"));
+		System.out.println("A lista estï¿½ vazia ? " + (linguagens.isEmpty() ? "Sim" : "Nï¿½o"));
 		System.out.println("Quantidade de itens ? " + linguagens.size());
 
 	}
 
 	private void aprenderCreate() {
 		System.out.println("========  CREATE  verificar debug ================");
-		System.out.println("PUT por padrão o PUT inserte ou atualiza ");
+		System.out.println("PUT por padrï¿½o o PUT inserte ou atualiza ");
 		estados.clear();
-		estados.put("CE", "Ceará");
+		estados.put("CE", "Cearï¿½");
 		estados.put("AL", "Alagoas");
 		estados.put("DF", "Distrito Federal");
 		estados.put("AC", "Acre");
-		estados.put("ES", "Espírito Santo");
-		estados.put("AP", "Amapá");
+		estados.put("ES", "Espï¿½rito Santo");
+		estados.put("AP", "Amapï¿½");
 		estados.put("AM", "Amazonas");
 		estados.put("BA", "Bahia");
-		estados.put("PB", "Paraíba");
-		estados.put("GO", "Goiás");
+		estados.put("PB", "Paraï¿½ba");
+		estados.put("GO", "Goiï¿½s");
 		estados.put("SC", "Santa Catarina");
 
 		System.out.println(estados);
@@ -79,12 +79,12 @@ public class Aula05 extends Aula {
 	private void aprenderRead() {
 
 		System.out.println("========  READ ================");
-		System.out.println("A lista está vazia ? " + (estados.isEmpty() ? "Sim" : "Não"));
+		System.out.println("A lista estï¿½ vazia ? " + (estados.isEmpty() ? "Sim" : "Nï¿½o"));
 		System.out.println("Quantidade de elementos " + estados.size());
 
 		System.out.println("------  Listando elementos -----");
 		System.out.println(estados);
-		System.out.println("-----listar as chaves por padrão--------");
+		System.out.println("-----listar as chaves por padrï¿½o--------");
 		for (String estado : estados.keySet()) {
 			System.out.println("Estado : " + estado);
 		}
@@ -101,22 +101,22 @@ public class Aula05 extends Aula {
 		}
 
 		System.out.println(" -----  Procurando elementos por chave-----");
-		System.out.println("PB é uma chave nessa lista? " + (estados.containsKey("PB") ? "Sim" : "Não"));
-		System.out.println("PE é  uma chave nessa lista? " + (estados.containsKey("PE") ? "Sim" : "Não"));
+		System.out.println("PB ï¿½ uma chave nessa lista? " + (estados.containsKey("PB") ? "Sim" : "Nï¿½o"));
+		System.out.println("PE ï¿½  uma chave nessa lista? " + (estados.containsKey("PE") ? "Sim" : "Nï¿½o"));
 
 		System.out.println(" -----  Procurando elementos por valor-----");
-		System.out.println("Paraíba é um valor nessa lista? " + (estados.containsValue("Paraíba") ? "Sim" : "Não"));
+		System.out.println("Paraï¿½ba ï¿½ um valor nessa lista? " + (estados.containsValue("Paraï¿½ba") ? "Sim" : "Nï¿½o"));
 		System.out
-				.println("Pernambuco é um valor nessa lista? " + (estados.containsValue("Pernambuco") ? "Sim" : "Não"));
+				.println("Pernambuco ï¿½ um valor nessa lista? " + (estados.containsValue("Pernambuco") ? "Sim" : "Nï¿½o"));
 
 		System.out.println(" -----  Obter um elemento por chave-----");
 		String obter1 = estados.get("DF");
-		System.out.println("Tentei buscar pela chave DF será que existe? " + (obter1 != null ? "Sim" : "Não"));
+		System.out.println("Tentei buscar pela chave DF serï¿½ que existe? " + (obter1 != null ? "Sim" : "Nï¿½o"));
 
 		String obter2 = estados.get("RR");
-		System.out.println("Tentei buscar pela chave RR será que existe? " + (obter2 != null ? "Sim" : "Não"));
+		System.out.println("Tentei buscar pela chave RR serï¿½ que existe? " + (obter2 != null ? "Sim" : "Nï¿½o"));
 
-		String obter3 = estados.getOrDefault("RO", "Não achei, tentei usar a chave RO");
+		String obter3 = estados.getOrDefault("RO", "Nï¿½o achei, tentei usar a chave RO");
 		System.out.println("Tentei buscar pela chave RO ... " + obter3);
 
 		String obter4 = estados.getOrDefault("BA", "eu sei que tem");
@@ -126,7 +126,7 @@ public class Aula05 extends Aula {
 
 	private void aprenderUpdate() {
 
-		System.out.println("======== UPDATE por padrão o PUT inserte ou atualiza ================");
+		System.out.println("======== UPDATE por padrÃ£o o PUT inserte ou atualiza ================");
 		System.out.println("----- basta informar uma chave existente e um valor novo");
 
 		System.out.println("--------- listando estados antes --------------");
@@ -176,7 +176,7 @@ public class Aula05 extends Aula {
 		System.out.println(" ------------- Criando 4 alunos e suas 3 notas --------------");
 		alunos.put("Oliota", new float[] { 7, 8, 9 });
 		alunos.put("Fulano", new float[] { 7, 8, 8, 8 });
-		alunos.put("Zé", new float[] { 7, 9, 9 });
+		alunos.put("Zï¿½", new float[] { 7, 9, 9 });
 		alunos.put("Maria", new float[] { 7, 9, 10 });
 
 		System.out.println("---------- listar todos os alunos");
@@ -188,15 +188,15 @@ public class Aula05 extends Aula {
 		System.out.println("---------- listar todos os alunos e suas respectivas notas");
 		listarAlunosDetalhes(alunos);
 
-		System.out.println("------- alterando as notas do Zé -------------");
-		alunos.put("Zé", new float[] { 10, 7, 10 });
+		System.out.println("------- alterando as notas do Zï¿½ -------------");
+		alunos.put("Zï¿½", new float[] { 10, 7, 10 });
 
-		System.out.println("-------buscar e ler notas do Zé -------------");
-		for (float nota : alunos.get("Zé")) {
+		System.out.println("-------buscar e ler notas do Zï¿½ -------------");
+		for (float nota : alunos.get("Zï¿½")) {
 			System.out.println("\tnota = " + nota);
 		}
 
-		System.out.println("---------- listar todos os alunos e suas respectivas notas após a alteração");
+		System.out.println("---------- listar todos os alunos e suas respectivas notas apï¿½s a alteraï¿½ï¿½o");
 		listarAlunosDetalhes(alunos);
 
 		System.out.println("---------- excluindo o Fulano");
@@ -208,7 +208,7 @@ public class Aula05 extends Aula {
 		}
 		
 
-		System.out.println("---------- listar todos os alunos e suas respectivas notas após exluir o Fulano");
+		System.out.println("---------- listar todos os alunos e suas respectivas notas apï¿½s exluir o Fulano");
 		listarAlunosDetalhes(alunos);
 
 	}
@@ -218,10 +218,10 @@ public class Aula05 extends Aula {
 			System.out.println("Aluno:" + aluno.getKey());
 			float soma = 0;
 			for (int nota = 0; nota < aluno.getValue().length; nota++) {
-				System.out.println("\t" + (nota + 1) + "º nota = " + aluno.getValue()[nota]);
+				System.out.println("\t" + (nota + 1) + "ï¿½ nota = " + aluno.getValue()[nota]);
 				soma += aluno.getValue()[nota];
 			}
-			System.out.println("\tMédia = " + soma / aluno.getValue().length);
+			System.out.println("\tMï¿½dia = " + soma / aluno.getValue().length);
 		}
 		System.out.println("----------------- total de alunos" + alunos.size() + " -----------");
 	}

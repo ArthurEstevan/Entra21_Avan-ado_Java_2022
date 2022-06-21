@@ -1,10 +1,11 @@
 package br.com.entra21.java.avancado.aula01.enuns;
 
 public enum Idiomas { 
-		BRASIL("Português"), EUA("Inglês")  , ALEMANHA("Alemão") , ARGENTINA("Espanhol");
+		BRASIL("Portuguï¿½s"), EUA("Inglï¿½s")  , ALEMANHA("Alemï¿½o") , ARGENTINA("Espanhol");
 		
 
         private final String valor;
+        
         private Idiomas(String valor) {
             this.valor = valor;
         }

@@ -2,6 +2,7 @@ package br.com.entra21.java.avancado;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
@@ -15,6 +16,9 @@ import br.com.entra21.java.avancado.aula03.anotacoes.Responsavel;
 import br.com.entra21.java.avancado.aula04.Aula04;
 import br.com.entra21.java.avancado.aula05.Aula05;
 import br.com.entra21.java.avancado.aula06.Aula06;
+import br.com.entra21.java.avancado.aula07.Aula07;
+import br.com.entra21.java.avancado.aula08.Aula08;
+import br.com.entra21.java.avancado.aula9.Aula09;
 
 public class Main {
 
@@ -26,69 +30,72 @@ public class Main {
 		byte opcao;
 		do {
 			System.out.println(montarMenu());
+			System.out.print("Escolha uma opÃ§Ã£o para aprender: ");
 			opcao = entrada.nextByte();
 
 			switch (opcao) {
+
 			case ZERO:
-				System.out.println("Até a proxima!");
-				break;
+			System.out.println("AtÃ© a proxima!");
+			break;
+
 			case 1:
-				Aula01.aprender();
-				break;
+			Aula01.aprender();
+			break;
+
 			case 2:
-				Aula02.aprender();
-				break;
+			Aula02.aprender();
+			break;
+
 			case 3:
-				Aula03.aprender();
-				break;
+			Aula03.aprender();
+			break;
+
 			case 4:
-				String titulo = "Aula04 - Collections - SET - HashSet";
+			String titulo = "Aula04 - Collections - SET - HashSet";
+			ArrayList<String> assuntos = new ArrayList<>();
+			assuntos.add("Definir");
+			assuntos.add("CRUD");
+			Aula04 aula04 = new Aula04(titulo, assuntos);
+			aula04.aprender();
+			break;
 
-				ArrayList<String> assuntos = new ArrayList<>();
-				assuntos.add("Definir");
-				assuntos.add("CRUD");
-
-				Aula04 aula04 = new Aula04(titulo, assuntos);
-				aula04.aprender();
-				break;
 			case 5:
-				new Aula05("Aula05 - Collections - MAP - HashMap",
-						new ArrayList<>(
-								Arrays.asList("Definir", "Create", "Read", "Update", "Delete", "Exemplo prático")))
-										.aprender();
+			new Aula05("Aula05 - Collections - MAP - HashMap",new ArrayList<>(Arrays.asList("Definir", "Create", "Read", "Update", "Delete", "Exemplo prÃ¡tico"))).aprender();
+			break;
 
-				break;
 			case 6:
-				new Aula06("Aula06 - Generics - HashMap(exercicio)",
-						new ArrayList<>(
-								Arrays.asList("criar interface", "usar interface")))
-										.aprender();
-				break;
+			new Aula06("Aula06 - Generics - HashMap(exercicio)",new ArrayList<>(Arrays.asList("criar interface", "usar interface"))).aprender();
+			break;
+
 			case 7:
-				pedirPaciencia();
-				break;
+			new Aula07("Aula07 - ExceÃ§Ãµes e tratamento de erros",new ArrayList<>(Arrays.asList("Tratamento de erros", "Obter informaÃ§Ãµes do erro","Criar e utilizar nossas exceÃ§Ãµes", "finally Ã© importante?", "Exemplo prÃ¡tico	"))).aprender();
+			break;
+
 			case 8:
-				pedirPaciencia();
-				break;
+			new Aula08("Aula08 - Lambda",new ArrayList<>(Arrays.asList("Listar", "Filtrar", "Estatisticas", "OrdenaÃ§Ã£o"))).aprender();
+			break;
+
 			case 9:
-				pedirPaciencia();
-				break;
+			new Aula09("Aula09 - Practice Each Subject", new ArrayList<String>(Arrays.asList("Classes Wrapper", "ENUM", "Collections", "HashSet", "HashMap"))).aprender();
+			break;
+
 			case 10:
-				pedirPaciencia();
-				break;
+			pedirPaciencia();
+			break;
 
 			default:
-				System.out.println("Escolha uma opção válida para aprender um assunto avançado sobre JAVA");
-				break;
+			System.out.println("Escolha uma opÃ§Ã£o vÃ¡lida para aprender um assunto avanÃ§ado sobre JAVA");
+			break;
 			}
 
 		} while (opcao != ZERO);
-		System.out.println("Obrigado, volse sempre que quiser aprender mais sobre JAVA AVANÇADO");
+		System.out.println("Obrigado, volse sempre que quiser aprender mais sobre JAVA AVANÃ‡ADO");
 
 	}
 
 	private static String montarMenu() {
-		String menu = "Módulo sobre JAVA AVANÇADO:";
+		String menu = "MÃ³dulo sobre JAVA AVANÃ‡ADO:";
 		menu += "\n  0 - Sair";
 		menu += "\n  1 - Aula 01  ENUM e Classes Wrapper";
 		menu += "\n  2 - Aula 02 - Collections - LIST";
@@ -96,18 +103,16 @@ public class Main {
 		menu += "\n  4 - Aula 04 - Collections - SET";
 		menu += "\n  5 - Aula 05 - Collections - MAP";
 		menu += "\n  6 - Aula 06 - Generics";
-		menu += "\n  7 - Aula 07 - Exceções e tratamento de erros";
-		menu += "\n  8 - Aula 08 - Funções Lambda";
+		menu += "\n  7 - Aula 07 - ExceÃ§Ãµes e tratamento de erros";
+		menu += "\n  8 - Aula 08 - FunÃ§oes Lambda";
+		menu += "\n  9 - Aula 09 - Exercitando os ConteÃºdos";
 		menu += "\n--------------------------------------------------------";
-		menu += "\n Escolha uma opção para aprender:";
-		menu += "\n--------------------------------------------------------";
-
 		return menu;
 	}
 
-	@Responsavel(ordemPrioridade = Responsavel.OrdemPrioridade.DOCUMENTAR, item = "Mostrar que não ta na hora", quemAssume = "Rubem Oliota")
+	@Responsavel(ordemPrioridade = Responsavel.OrdemPrioridade.DOCUMENTAR, item = "Mostrar que nï¿½o ta na hora", quemAssume = "Rubem Oliota")
 	private static void pedirPaciencia() {
-		System.out.println("CALMA CALMA CALMA, muita CALMA... ainda não esta pronto.");
+		System.out.println("CALMA CALMA CALMA, muita CALMA... ainda nï¿½o esta pronto.");
 		System.out.println("--------------------------------------------------------");
 
 	}

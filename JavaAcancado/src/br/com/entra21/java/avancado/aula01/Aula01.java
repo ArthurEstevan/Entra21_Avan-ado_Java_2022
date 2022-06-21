@@ -3,6 +3,7 @@ package br.com.entra21.java.avancado.aula01;
 import java.util.Scanner;
 
 import br.com.entra21.java.avancado.aula01.enuns.Enuns;
+import br.com.entra21.java.avancado.aula01.wrappers.Wrappers;
 import br.com.entra21.java.avancado.aula03.anotacoes.Lembrete;
 
 public class Aula01 {
@@ -11,34 +12,44 @@ public class Aula01 {
 	 
 	public static void aprender() {
 
-		System.out.println("Assuntos da aula 01");
+		System.out.println("\n\tAssuntos da aula 01\n");
 
 		byte opcao;
 		do {
-			System.out.println("Menu - AULA 01:");
+			System.out.println("Menu - AULA 01:\n");
 			System.out.println("-1 - SAIR");
 			System.out.println(" 0 - Voltar");
 			System.out.println(" 1 - Classes wrapper");
 			System.out.println(" 2 - Enum escrito separado"); 
+			System.out.println("--------------------------------------------------------");
+			System.out.print("Escolha uma op√ß√£o para aprender: ");
 			opcao = entrada.nextByte();
 
 			switch (opcao) {
+			
 			case -1:
-				System.exit(1);
-				break;
+			System.exit(1);
+			break;
+				
 			case 0:
-				System.out.println("Voltando...");
-				break;
+			System.out.println("Voltando...");
+			break;
+			
 			case 1: 
-				Enuns.aprender();
-				break;
+			Wrappers.aprender();
+			break;
+				
 			case 2: 
-				break;
+			Enuns.aprender();
+			break;
+			
 			case 3: 
-				break;
+			break;
+			
 			default:
-				System.out.println("Escolha uma opÁ„o v·lida");
-				break;
+			System.out.println("Escolha uma op√ß√£o v√°lida");
+			break;
+			
 			}
 
 		} while (opcao != 0);

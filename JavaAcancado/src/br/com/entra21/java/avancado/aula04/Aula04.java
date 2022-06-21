@@ -26,7 +26,7 @@ public class Aula04 extends Aula {
 			manipularCRUD();
 			break;
 		default:
-			System.out.println("Opção inválida para o menu de " + super.getTitulo());
+			System.out.println("Opï¿½ï¿½o invï¿½lida para o menu de " + super.getTitulo());
 			break;
 		}
 		return opcao;
@@ -35,14 +35,14 @@ public class Aula04 extends Aula {
 	private void aprenderHashSet() {
 
 		System.out.println("Caracteristicas do HashSet");
-		System.out.println("- Não possui uma ordenação natural (incremento ou alfabetica)");
-		System.out.println("- Não é ordenavel");
-		System.out.println("- Não permite duplicidades");
+		System.out.println("- Nï¿½o possui uma ordenaÃ§Ã£o natural (incremento ou alfabetica)");
+		System.out.println("- Nï¿½o ï¿½ ordenavel");
+		System.out.println("- Nï¿½o permite duplicidades");
 
 		System.out.println("===========================");
 		HashSet<String> linguagens = new HashSet<String>();
 
-		System.out.println("A lista está vazia ? " + (linguagens.isEmpty() ? "Sim" : "Não"));
+		System.out.println("A lista estï¿½ vazia ? " + (linguagens.isEmpty() ? "Sim" : "Nï¿½o"));
 		System.out.println("Quantidade de itens ? " + linguagens.size());
 
 	}
@@ -78,7 +78,7 @@ public class Aula04 extends Aula {
 	private void R(HashSet<String> linguagens) {
 
 		System.out.println("========  READ ================");
-		System.out.println("A lista está vazia ? " + (linguagens.isEmpty() ? "Sim" : "Não"));
+		System.out.println("A lista estï¿½ vazia ? " + (linguagens.isEmpty() ? "Sim" : "Nï¿½o"));
 		System.out.println("Quantidade de elementos " + linguagens.size());
 
 		System.out.println("------  Listando elementos -----");
@@ -89,18 +89,18 @@ public class Aula04 extends Aula {
 		}
 
 		System.out.println(" -----  Procurando elementos -----");
-		System.out.println("Java esta nessa lista? " + (linguagens.contains("Java") ? "Sim" : "Não"));
-		System.out.println("Advpl esta nessa lista? " + (linguagens.contains("Advpl") ? "Sim" : "Não"));
+		System.out.println("Java esta nessa lista? " + (linguagens.contains("Java") ? "Sim" : "Nï¿½o"));
+		System.out.println("Advpl esta nessa lista? " + (linguagens.contains("Advpl") ? "Sim" : "Nï¿½o"));
 
 	}
 
 	private void U(HashSet<String> linguagens) {
 
-		System.out.println("======== UPDATE não é possivel atualizar STRING================");
+		System.out.println("======== UPDATE nï¿½o ï¿½ possivel atualizar STRING================");
 		System.out.println("----- para trocar ele por outro seria necessario remover e depois adicionar outro");
 		System.out.println(
-				"----- para outras classes que contem atributos é possivel atualizar pois o objeto continua existindo na lista");
-		System.out.println("mas é necessario percorrer a lista para encontrar e fazer alterações");
+				"----- para outras classes que contem atributos ï¿½ possivel atualizar pois o objeto continua existindo na lista");
+		System.out.println("mas ï¿½ necessario percorrer a lista para encontrar e fazer alteraï¿½ï¿½es");
 
 		System.out.println("----------------------------");
 		System.out.println(linguagens);

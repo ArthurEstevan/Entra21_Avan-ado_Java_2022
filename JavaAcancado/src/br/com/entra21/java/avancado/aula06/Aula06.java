@@ -5,6 +5,8 @@ import java.util.HashMap;
 
 import br.com.entra21.java.avancado.Aula;
 import br.com.entra21.java.avancado.Pessoa;
+import br.com.entra21.java.avancado.aula06.cruds.PessoaCrud;
+import br.com.entra21.java.avancado.aula06.cruds.ProdutoCrud;
 
 public class Aula06 extends Aula {
 
@@ -63,10 +65,10 @@ public class Aula06 extends Aula {
 				System.out.println("Saindo dos CRUDS...");
 				break;
 			case 1:
-				//new PessoaCrud().gerenciar();
+				new PessoaCrud().gerenciar();
 				break;
 			case 2:
-				//new ProdutoCrud().gerenciar(); 
+				new ProdutoCrud().gerenciar(); 
 				break;
 
 			default:
