@@ -1,32 +1,34 @@
-# entra21 Java avançado
-Repositório com as práticas realizadas em aula  
+# Entra21 Advanced Java
 
-> Conteúdo prático realizado em sala durante o projeto Entra21
-> Em aditivo oportunidades de aprendizado em:
-> - Versionamento
-> - Linguagem markdown
-> - Documentação
+### Repository with practices carried out in class
+
+>Practical content delivered in the classroom during the Entra21 project In additive learning opportunities in:
+>
+> - Versioning
+> - Markdown Language
+> - Documentation
+
+
 ![Gif Entra21](/entra21.gif)
 
-## Aula Ministradas
+## Class Taught
 
 <a href="#"><img align="center" src="./giphy.gif" width="400 " height="300" /></a>
 
-| AULA | ASSUNTO |
+| Class | Subject |
 |------|---------|
-|Aula 01 |Classes Wrappers e ENUM  
-|Aula 02 |Collections - List - ArrayList e LinkedList  
-|Aula 03 |Trabalhando com Datas,Usando e criando anotações customizadas
-|Aula 04 |Collections - Set - HashSet
-|Aula 05 |Collections - Map - HashMap
-|Aula 06 |Generics e prática com HashMap
-|Aula 07 |Exceptions e tratamento de erros
-|Aula 08 |Expressões Lambda
-|Aula 09 |Prática com listas e exercicios
-|Aula 10 |Entrega da 1º versão do projeto final com assuntos aprendidos até o momento
+|Aula 01 |[Classes Wrappers e ENUM](/JavaAcancado/src/br/com/entra21/java/avancado/aula01)  
+|Aula 02 |[Collections - List - ArrayList e LinkedList](/JavaAcancado/src/br/com/entra21/java/avancado/aula02)  
+|Aula 03 |[Trabalhando com Datas,Usando e criando anotações customizadas](/JavaAcancado/src/br/com/entra21/java/avancado/aula03)
+|Aula 04 |[Collections - Set - HashSet](/JavaAcancado/src/br/com/entra21/java/avancado/aula04)
+|Aula 05 |[Collections - Map - HashMap](/JavaAcancado/src/br/com/entra21/java/avancado/aula05)
+|Aula 06 |[Generics e prática com HashMap](/JavaAcancado/src/br/com/entra21/java/avancado/aula06)
+|Aula 07 |[Exceptions e tratamento de erros](/JavaAcancado/src/br/com/entra21/java/avancado/aula07)
+|Aula 08 |[Expressões Lambda](/JavaAcancado/src/br/com/entra21/java/avancado/aula08)
+|Aula 09 |[Prática com listas e exercicios](/JavaAcancado/src/br/com/entra21/java/avancado/aula9)
 
-## Projeto de exemplo 
+## Example Project 
 
-### Esse projeto contempla todos os assuntos vistos até o momento e pode ser usado como exemplo 
+### This project covers all the subjects seen so far and can be used as an example:
 
-[Projeto de exemplo](https://github.com/oliota/entra21-modelo-projeto-backend-2022/tree/agil-logica-poo-avancado)
+[Example Project](https://github.com/TimeVerde/SistemaBancario)
