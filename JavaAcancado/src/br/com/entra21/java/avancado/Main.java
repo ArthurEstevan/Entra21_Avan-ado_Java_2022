@@ -2,17 +2,10 @@ package br.com.entra21.java.avancado;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Random;
 import java.util.Scanner;
-
-import javax.swing.JOptionPane;
-
 import br.com.entra21.java.avancado.aula01.Aula01;
-import br.com.entra21.java.avancado.aula01.enuns.Enuns;
-import br.com.entra21.java.avancado.aula01.wrappers.Wrappers;
 import br.com.entra21.java.avancado.aula02.Aula02;
 import br.com.entra21.java.avancado.aula03.Aula03;
-import br.com.entra21.java.avancado.aula03.anotacoes.Responsavel;
 import br.com.entra21.java.avancado.aula04.Aula04;
 import br.com.entra21.java.avancado.aula05.Aula05;
 import br.com.entra21.java.avancado.aula06.Aula06;
@@ -52,12 +45,7 @@ public class Main {
 			break;
 
 			case 4:
-			String titulo = "Aula04 - Collections - SET - HashSet";
-			ArrayList<String> assuntos = new ArrayList<>();
-			assuntos.add("Definir");
-			assuntos.add("CRUD");
-			Aula04 aula04 = new Aula04(titulo, assuntos);
-			aula04.aprender();
+			new Aula04("Aula04 - Collections - SET - HashSet", new ArrayList<>(Arrays.asList("Definir","CRUD"))).aprender();
 			break;
 
 			case 5:
@@ -65,7 +53,7 @@ public class Main {
 			break;
 
 			case 6:
-			new Aula06("Aula06 - Generics - HashMap(exercicio)",new ArrayList<>(Arrays.asList("criar interface", "usar interface"))).aprender();
+			new Aula06("Aula06 - Generics - HashMap(exercicio)",new ArrayList<>(Arrays.asList("Criar Interface", "Interface"))).aprender();
 			break;
 
 			case 7:
@@ -77,11 +65,7 @@ public class Main {
 			break;
 
 			case 9:
-			new Aula09("Aula09 - Practice Each Subject", new ArrayList<String>(Arrays.asList("Classes Wrapper", "ENUM", "Collections", "HashSet", "HashMap"))).aprender();
-			break;
-
-			case 10:
-			pedirPaciencia();
+			new Aula09("Aula09 - Practice Each Subject", new ArrayList<String>(Arrays.asList("Wrapper", "ENUM", "Collections"))).aprender();
 			break;
 
 			default:
@@ -95,9 +79,9 @@ public class Main {
 	}
 
 	private static String montarMenu() {
-		String menu = "Módulo sobre JAVA AVANÇADO:";
+		String menu = "\nAula sobre JAVA AVANÇADO:";
 		menu += "\n  0 - Sair";
-		menu += "\n  1 - Aula 01  ENUM e Classes Wrapper";
+		menu += "\n  1 - Aula 01 - ENUM e Classes Wrapper";
 		menu += "\n  2 - Aula 02 - Collections - LIST";
 		menu += "\n  3 - Aula 03 - Annotations e Datas";
 		menu += "\n  4 - Aula 04 - Collections - SET";
@@ -109,12 +93,4 @@ public class Main {
 		menu += "\n--------------------------------------------------------";
 		return menu;
 	}
-
-	@Responsavel(ordemPrioridade = Responsavel.OrdemPrioridade.DOCUMENTAR, item = "Mostrar que n�o ta na hora", quemAssume = "Rubem Oliota")
-	private static void pedirPaciencia() {
-		System.out.println("CALMA CALMA CALMA, muita CALMA... ainda n�o esta pronto.");
-		System.out.println("--------------------------------------------------------");
-
-	}
-
 }

@@ -7,49 +7,51 @@ import java.time.LocalTime;
 import java.time.Month;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Datas {
 	
-
 	static Scanner entrada = new Scanner(System.in);
 	
 	public static void aprenderDatasComputador() {
+		
 		System.out.println("O computador entende o tempo de forma diferente");
+		
 		Instant inicio = Instant.now();
-		System.out.println("Escolha um numero qualquer, vamos contar o tempo que vc gastou pensando");
+		
+		System.out.println("Escolha um n√∫mero qualquer, vamos contar o tempo que vc gastou pensando");
 		byte numero= entrada.nextByte();
 		
 		Instant fim = Instant.now();
+		
 		Duration duracao = Duration.between(inicio, fim);
+		
 		System.out.println("--------------------------------------------");
 		System.out.println("Milisegundos gastos escolhendo = " + duracao.toMillis());
 		System.out.println("Segundos gastos escolhendo = " + duracao.toSeconds());
 		System.out.println("Minutos gastos escolhendo = " + duracao.toMinutes());
 		System.out.println("Horas gastos escolhendo = " + duracao.toHours());
-		System.out.println("… assim que o computador entende o tempo, como uma duraÁ„o iniciada em 01/01/1970 atÈ a data atual em nanosegundos");
+		System.out.println("√â assim que o computador entende o tempo, como uma dura√ß√£o iniciada em 01/01/1970 at√© a data atual em nanosegundos");
 		System.out.println("--------------------------------------------");
-		
-		
 
 	}
  
-	
 	public static void aprenderDatasHumanizadas() {
-		System.out.println("Assunto datas");
+		
+		System.out.println("\n\tAssunto datas");
 
 		DateTimeFormatter formatters = DateTimeFormatter.ofPattern("dd/MM/YYYY");
 	  
-	    	
 		LocalDate hoje = LocalDate.now();
+		
 		System.out.println(hoje); // YYYY-MM-DD(formato ISO-8601)
+		
 		System.out.println(formatters.format(hoje)); 
 		
 		LocalDate nascimento = LocalDate.of(1990, 12, 30);
+		
 		System.out.println(nascimento); 
-		System.out.println(nascimento); 
-
+		
 		LocalDate essaQuinta = LocalDate.of(2022, Month.JUNE, 2);
 
 		Period periodo = Period.between(nascimento, essaQuinta);
@@ -58,13 +60,12 @@ public class Datas {
 		System.out.println("anos = " + periodo.getYears());
 		System.out.println("meses = " + periodo.getMonths());
 		System.out.println("dias = " + periodo.getDays());
-		System.out.println("Mas quem esta contando? a API de datas do Java :)  ");
+		System.out.println("Mas quem esta contando? API de datas do Java :)");
 
 		LocalTime horarioDeEntrada = LocalTime.of(18, 15);
-		System.out.println(horarioDeEntrada); // 09:00
 		
+		System.out.println(horarioDeEntrada);
 		
-
 	}
  
 

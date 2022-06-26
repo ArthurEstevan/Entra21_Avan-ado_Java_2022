@@ -6,7 +6,6 @@ import java.util.HashMap;
 import br.com.entra21.java.avancado.Aula;
 import br.com.entra21.java.avancado.Pessoa;
 import br.com.entra21.java.avancado.aula06.cruds.PessoaCrud;
-import br.com.entra21.java.avancado.aula06.cruds.ProdutoCrud;
 
 public class Aula06 extends Aula {
 
@@ -18,66 +17,74 @@ public class Aula06 extends Aula {
 		if(pessoas.isEmpty()) { 
 		pessoas.put("Fulano", new Pessoa("Fulano",(byte)33));
 		pessoas.put("Teste", new Pessoa("Teste",(byte)24));
-		pessoas.put("JosÈ", new Pessoa("JosÈ",(byte)17));
+		pessoas.put("Jos√©", new Pessoa("Jos√©",(byte)17));
 		pessoas.put("Maria", new Pessoa("Maria",(byte)18));
 		}
-		
 	}
 
 	@Override
 	public byte capturarOpcao() {
 
 		byte opcao = super.capturarOpcao();
+		
 		switch (opcao) {
 		case 1:
-			aprenderGenerics();
-			break;
+		aprenderGenerics();
+		break;
+		
 		case 2:
-			praticarUso();
-			break;
+		praticarUso();
+		break;
 		}
 		return opcao;
 	}
 
 	private void aprenderGenerics() {
-		System.out.println("Criar uma interface para aÁıes de um CRUD que se repetem em todos os CRUD");
-		System.out.println("Cada crud gerencia um collection ou modelo diferente e interfaces simples n„o resolveriam");
-		System.out.println("Na declaraÁ„o da interface informe <LETRA_AQUI> para informar que:");
-		System.out.println("Sempre que LETRA_AQUI foi declarada na interface considere como TIPO_DESCONHECIDO");
-		System.out.println("Nas classes que implementarem a interface utilize");
-		System.out.println("implements IMinhaInterface<SUA_CLASSE_OU_TIPO_AQUI>");
-		System.out.println(
-				"Ao solicitar que gere os mÈtodos automaticamente eles ser„o criados j· com o tipo solicitado");
+		
+		System.out.println("\n-------- Criar uma interface para a√ß√µes de um CRUD que se repetem em todos os CRUD --------\n");
+		
+		System.out.println("- Cada crud gerencia um collection ou modelo diferente que interfaces simples n√£o resolveriam\n");
+		
+		System.out.println("- Na declara√ß√£o da interface informe <LETRA_AQUI> para informar que:\n");
+		
+		System.out.println("\t * Sempre que LETRA_AQUI foi declarada na interface considere como TIPO_DESCONHECIDO\n");
+		
+		System.out.println("\t * Nas classes que implementarem a interface utilize:\n");
+		
+		System.out.println("\t\t - implements IMinhaInterface<SUA_CLASSE_OU_TIPO_AQUI>\n");
+		
+		System.out.println("- Ao solicitar que gere os m√©todos automaticamente eles ser√£o criados j√° com o tipo solicitado");
+		
 	}
 
 	private void praticarUso() {
+		
+		System.out.println("\n\tAssuntos Gerenciamento\n");
+		
 		byte opcao;
 
 		do {
-
+		
+			System.out.println("Menu - Gerenciamento\n");
 			System.out.println("0 - VOLTAR");
-			System.out.println("1 - gerenciar pessoas");
-			System.out.println("2 - gerenciar produtos");
+			System.out.println("1 - Gerenciar Pessoas");
+			System.out.println("--------------------------------------------------------");
+			System.out.print("Escolha uma op√ß√£o para aprender: ");
+
 			opcao = getEntrada().nextByte();
 
 			switch (opcao) {
+			
 			case 0:
-				System.out.println("Saindo dos CRUDS...");
-				break;
+			System.out.println("Saindo dos CRUDS...");
+			break;
+			
 			case 1:
-				new PessoaCrud().gerenciar();
-				break;
-			case 2:
-				new ProdutoCrud().gerenciar(); 
-				break;
+			new PessoaCrud().gerenciar();
+			break;
 
-			default:
-				System.out.println("N„o È um opÁ„o v·lida");
-				break;
 			}
 
 		} while (opcao != 0);
-
 	}
-
 }

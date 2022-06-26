@@ -55,6 +55,7 @@ public class Wrappers {
 		for (int logico = 0; logico < vetorPossivilidadesBooleans.length; logico++) {
 			System.out.println("Classe Boolean possui vários métodos que aceitam Strings ou ENUM e retorna valores booleanos, verifique com o debug o motivo do valor = " + vetorPossivilidadesBooleans[logico]);
 		}
+		System.out.println();
 	}
 
 }

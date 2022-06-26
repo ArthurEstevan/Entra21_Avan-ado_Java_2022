@@ -1,25 +1,17 @@
 package br.com.entra21.java.avancado.aula08;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.InputMismatchException;
 import java.util.IntSummaryStatistics;
 import java.util.List;
-import java.util.Scanner;
 import java.util.stream.Collectors;
-
 import br.com.entra21.java.avancado.Aula;
-import br.com.entra21.java.avancado.BocaSujaUtils;
 import br.com.entra21.java.avancado.Pessoa;
-import br.com.entra21.java.avancado.aula06.cruds.PessoaCrud;
-import br.com.entra21.java.avancado.aula06.cruds.ProdutoCrud;
 
 public class Aula08 extends Aula {
+	
 	Pessoa pessoa;
 	public static HashMap<String, Pessoa> pessoas = new HashMap<>();
 
@@ -32,108 +24,129 @@ public class Aula08 extends Aula {
 	public byte capturarOpcao() {
 
 		byte opcao = super.capturarOpcao();
+		
 		switch (opcao) {
+		
 		case 1:
-			aprenderListar();
-			break;
+		aprenderListar();
+		break;
+		
 		case 2:
-			aprenderFiltrar();
-			break;
+		aprenderFiltrar();
+		break;
+		
 		case 3:
-			aprenderEstatisticas();
-			break;
+		aprenderEstatisticas();
+		break;
+		
 		case 4:
-			aprenderOrdenacao();
-			break;
+		aprenderOrdenacao();
+		break;
 		}
 		return opcao;
 	}
 
 	private void aprenderListar() {
 
-		System.out.println("Imprime todos os elementos da lista!");
-
 		ArrayList<Integer> lista = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
 
-		System.out.println("-----Listando de forma muito resumida---");
+		System.out.println("\n----- Listando de forma muito resumida -----\n");
 		lista.forEach(System.out::println);
 
-		System.out.println("-----Listando normal---");
+		System.out.println("\n----- Listando normal -----\n");
+		
 		for (Integer numero : lista) {
 			System.out.println(numero);
 		}
 
-		System.out.println("-------Listando com Lambda---( uma unica ação não exige escopo)-------");
-		System.out.println("itemDoLoop -> açao unica que usa o itemDoLoop");
+		System.out.println("\n------- Listando com Lambda ( uma unica aÃ§Ã£o nÃ£o exige escopo) -------\n");
+		
+		System.out.println("itemDoLoop -> aÃ§Ã£o unica que usa o itemDoLoop\n");
 		lista.forEach(numero -> System.out.println(numero));
 
-		System.out.println("-------Listando com Lambda---(mais de uma ação exige escopo)-------");
+		System.out.println("\n------- Listando com Lambda---(mais de uma aÃ§Ã£o exige escopo) -------\n");
+		
 		System.out.println("itemDoLoop -> { ");
-		System.out.println(" primeira ação");
-		System.out.println(" segunda ação");
-		System.out.println("}");
+		System.out.println(" primeira aÃ§Ã£o");
+		System.out.println(" segunda aÃ§Ã£o");
+		System.out.println("}\n");
+		
 		lista.forEach(numero -> {
 			if (numero % 2 == 0) {
-				System.out.println(numero + " é par");
+				System.out.println(numero + " Â° par");
 			} else {
-				System.out.println(numero + " é impar");
+				System.out.println(numero + " Â° impar");
 			}
 		});
 	}
 
 	private void aprenderFiltrar() {
+		
 		ArrayList<Pessoa> pessoas = new ArrayList<>();
+		
 		pessoas.add(new Pessoa("Juninho", (byte) 17));
 		pessoas.add(new Pessoa("Fulano", (byte) 18));
-		pessoas.add(new Pessoa("Zé", (byte) 12));
+		pessoas.add(new Pessoa("ZÃ©", (byte) 12));
 		pessoas.add(new Pessoa("Maria", (byte) 31));
 
-		System.out.println("-----------------------------------------");
-		System.out.println("Pessoas maiores de idade:");
+		System.out.println("\n-----------------------------------------");
+		
+		System.out.println("Pessoas maiores de idade: ");
+		
 		List<Pessoa> pessoasMaiores = pessoas.stream().filter(p -> p.getIdade() >= 18).collect(Collectors.toList());
 
 		pessoasMaiores.forEach(pessoa -> {
-			System.out.println("Pessoa de maior:" + pessoa.getNome() + " - " + pessoa.getIdade());
+			System.out.println("Pessoa de maior: " + pessoa.getNome() + " - " + pessoa.getIdade());
 		});
 
 		System.out.println("-----------------------------------------");
-		System.out.println("Pessoas cuja idade é par:");
-		List<Pessoa> pessoasComIdadePar = pessoas.stream().filter(p -> p.getIdade() % 2 == 0)
-				.collect(Collectors.toList());
+		
+		System.out.println("Pessoas cuja idade Ã© par: ");
+		
+		List<Pessoa> pessoasComIdadePar = pessoas.stream().filter(p -> p.getIdade() % 2 == 0).collect(Collectors.toList());
+		
 		pessoasComIdadePar.forEach(pessoa -> {
-			System.out.println("Pessoa  com idade par:" + pessoa.getNome() + " - " + pessoa.getIdade());
+			System.out.println("Pessoa  com idade par: " + pessoa.getNome() + " - " + pessoa.getIdade());
 		});
 
 		System.out.println("-----------------------------------------");
-		System.out.println("Pessoas que terminam com a letra o:");
-		List<Pessoa> pessoasFinalLetraO = pessoas.stream().filter(p -> p.getNome().endsWith("o"))
-				.collect(Collectors.toList());
+		
+		System.out.println("Pessoas que terminam com a letra o: ");
+		
+		List<Pessoa> pessoasFinalLetraO = pessoas.stream().filter(p -> p.getNome().endsWith("o")).collect(Collectors.toList());
+		
 		pessoasFinalLetraO.forEach(pessoa -> {
-			System.out.println("Pessoa que termina com a letra o:" + pessoa.getNome() + " - " + pessoa.getIdade());
+			System.out.println("Pessoa que termina com a letra o: " + pessoa.getNome() + " - " + pessoa.getIdade());
 		});
 
 		System.out.println("-----------------------------------------");
-		System.out.println("Pessoas que terminam com a letra o e é maior de idade:");
-		List<Pessoa> pessoasFinalLetraOMaior = pessoas.stream()
-				.filter(p -> p.getNome().endsWith("o") && p.getIdade() >= 18).collect(Collectors.toList());
+		
+		System.out.println("Pessoas que terminam com a letra o e Ã© maior de idade: ");
+		
+		List<Pessoa> pessoasFinalLetraOMaior = pessoas.stream().filter(p -> p.getNome().endsWith("o") && p.getIdade() >= 18).collect(Collectors.toList());
+		
 		pessoasFinalLetraOMaior.forEach(pessoa -> {
-			System.out.println("Pessoa que termina com a letra o:" + pessoa.getNome() + " - " + pessoa.getIdade());
+			System.out.println("Pessoa que termina com a letra o: " + pessoa.getNome() + " - " + pessoa.getIdade());
 		});
 
 		System.out.println("-----------------------------------------");
-		System.out
-				.println("Pessoas que terminam com a letra o e é maior de idade: filtradas e listadas na mesma ação:");
+		
+		System.out.println("Pessoas que terminam com a letra o e Ã© maior de idade: filtradas e listadas na mesma aÃ§Ã£o: ");
+		
 		pessoas.stream().filter(p -> p.getIdade() >= 18).filter(p -> p.getNome().endsWith("o")).forEach(pessoa -> {
-			System.out.println("Pessoa de maior:" + pessoa.getNome() + " - " + pessoa.getIdade());
+			System.out.println("Pessoa de maior: " + pessoa.getNome() + " - " + pessoa.getIdade());
 		});
 
 	}
 
 	private void aprenderEstatisticas() {
-		System.out.println("Imprime todos os elementos da lista!");
+		
+		System.out.println("\nImprime todos os elementos da lista\n");
 
 		ArrayList<Integer> lista = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
-		System.out.println("-----Listando normal---");
+		
+		System.out.println("\n----- Listando normal -----\n");
+		
 		for (Integer numero : lista) {
 			System.out.println(numero);
 		}
@@ -143,55 +156,63 @@ public class Aula08 extends Aula {
 		System.out.println("Maior:" + stats.getMax());
 		System.out.println("Menor:" + stats.getMin());
 		System.out.println("Soma:" + stats.getSum());
-		System.out.println("Média:" + stats.getAverage());
+		System.out.println("MÃ©dia:" + stats.getAverage());
 		System.out.println("Contagem" + stats.getCount());
 
 	}
 
 	private void aprenderOrdenacao() {
-		List<String> nomes = Arrays.asList("João", "José", "Maria", "Adam");
-		System.out.println("--------Listando nomes ordem de criação------------");
+		
+		List<String> nomes = Arrays.asList("JoÃ£o", "JosÃ©", "Maria", "Adam");
+		
+		System.out.println("\n-------- Listando nomes ordem de criaÃ§Ã£o --------\n");
 		nomes.forEach(System.out::println);
 
-		System.out.println("--------Listando nomes em ordem alfabetica------------");
+		System.out.println("\n--------Listando nomes em ordem alfabetica------------\n");
 		nomes.sort(String::compareTo);
 		nomes.forEach(System.out::println);
 		
 		
 		ArrayList<Pessoa> pessoas = new ArrayList<>();
+		
 		pessoas.add(new Pessoa("Juninho", (byte) 17));
 		pessoas.add(new Pessoa("Fulano", (byte) 18));
-		pessoas.add(new Pessoa("Zé", (byte) 12));
+		pessoas.add(new Pessoa("ZÃ©", (byte) 12));
 		pessoas.add(new Pessoa("Maria", (byte) 31));
 		pessoas.add(new Pessoa("Ananias", (byte) 50));
 
-		System.out.println("--------Listando pessoas em ordem de criação  (é um classe com mais atributos)------------");
+		System.out.println("\n-------- Listando pessoas em ordem de criaÃ§Ã£o (classe com mais atributos) --------\n");
+		
 		pessoas.forEach(pessoa-> {
-			System.out.println("Pessoa de maior:" + pessoa.getNome() + " - " + pessoa.getIdade());
+			System.out.println("Pessoa de maior: " + pessoa.getNome() + " - " + pessoa.getIdade());
 		});
 
-		System.out.println("--------Listando pessoas em ordem alfabetica  (é um classe com mais atributos)------------");
+		System.out.println("\n-------- Listando pessoas em ordem alfabetica (classe com mais atributos) --------\n");
+		
 		pessoas.sort( Comparator.comparing(Pessoa::getNome )) ; 
 		pessoas.forEach(pessoa-> {
-			System.out.println("Pessoa de maior:" + pessoa.getNome() + " - " + pessoa.getIdade());
+			System.out.println("Pessoa de maior: " + pessoa.getNome() + " - " + pessoa.getIdade());
 		});
 		
-		System.out.println("--------Listando pessoas em ordem alfabetica DECRESCENTE  (é um classe com mais atributos)------------");
+		System.out.println("\n-------- Listando pessoas em ordem alfabetica DECRESCENTE (classe com mais atributos) --------\n");
+		
 		pessoas.sort( Comparator.comparing(Pessoa::getNome ).reversed()) ; 
 		pessoas.forEach(pessoa-> {
-			System.out.println("Pessoa de maior:" + pessoa.getNome() + " - " + pessoa.getIdade());
+			System.out.println("Pessoa de maior: " + pessoa.getNome() + " - " + pessoa.getIdade());
 		});
 		
-		System.out.println("--------Listando pessoas em ordem de idade  (é um classe com mais atributos)------------");
+		System.out.println("\n-------- Listando pessoas em ordem de idade (classe com mais atributos) --------\n");
+		
 		pessoas.sort( Comparator.comparing(Pessoa::getIdade )) ; 
 		pessoas.forEach(pessoa-> {
-			System.out.println("Pessoa de maior:" + pessoa.getNome() + " - " + pessoa.getIdade());
+			System.out.println("Pessoa de maior: " + pessoa.getNome() + " - " + pessoa.getIdade());
 		});	
 		
-		System.out.println("--------Listando pessoas em ordem de idade DECRESCENTE  (é um classe com mais atributos)------------");
+		System.out.println("\n-------- Listando pessoas em ordem de idade DECRESCENTE (classe com mais atributos) --------\n");
+		
 		pessoas.sort( Comparator.comparing(Pessoa::getIdade ).reversed()) ; 
 		pessoas.forEach(pessoa-> {
-			System.out.println("Pessoa de maior:" + pessoa.getNome() + " - " + pessoa.getIdade());
+			System.out.println("Pessoa de maior: " + pessoa.getNome() + " - " + pessoa.getIdade());
 		});
 
 	}

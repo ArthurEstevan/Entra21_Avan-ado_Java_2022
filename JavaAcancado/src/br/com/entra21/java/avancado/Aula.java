@@ -3,7 +3,7 @@ package br.com.entra21.java.avancado;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Aula {// classe que parece um algoritmo
+public class Aula {
 
 	private Scanner entrada = new Scanner(System.in);
 	private String titulo;
@@ -17,15 +17,20 @@ public class Aula {// classe que parece um algoritmo
 
 	public void aprender() {
 		do {
-			System.out.println("=========>   MENU " + this.titulo + "   <==================");
-			System.out.println("-1 = Sair");
-			System.out.println(" 0 = Voltar");
+			System.out.println("\n=========>   MENU " + this.titulo + "   <=========\n");
+			
+			System.out.println("-1 - SAIR");
+			System.out.println(" 0 - Voltar");
+			
 			if (assuntos != null && !assuntos.isEmpty()) {
+				
 				for (int contador = 0; contador < assuntos.size(); contador++) {
-					System.out.println(" " + (contador + 1) + " = " + assuntos.get(contador));
+					System.out.println(" " + (contador + 1) + " - " + assuntos.get(contador));
 				}
+				System.out.println("--------------------------------------------------------");
+				System.out.print("Escolha uma opÃ§Ã£o para aprender: ");
 			} else {
-				System.out.println("Não há itens especificos para essa aula???");
+				System.out.println("NÃ£o hÃ¡ itens especificos para essa aula???");
 			}
 
 		} while (capturarOpcao() != 0);
@@ -38,11 +43,14 @@ public class Aula {// classe que parece um algoritmo
 		switch (opcao) {
 
 		case -1:
-			System.exit(-1);
-			break;
+		System.exit(-1);
+		break;
+		
 		case 0:
-			System.out.println("Até a proxima!");
-			break;
+		System.out.println("Voltando...");
+		System.out.println("Obrigado, volte sempre que quiser aprender mais sobre " +this.titulo);	
+		break;
+				
 		}
 		return opcao;
 	}
