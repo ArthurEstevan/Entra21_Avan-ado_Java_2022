@@ -55,7 +55,7 @@ public class ArrayList {
 		
 		System.out.println("\n============= Exercitando ArrayList =============\n");
 		
-		System.out.println("---------- Listando Posiçãos  ----------\n");
+		System.out.println("---------- Listando Posiçãos ----------\n");
 		
 		System.out.println("Posição n°1 do Ranking: " + carrosDeLuxo.get(0));
 		System.out.println("Posição n°Ultimo do Raking: " + carrosDeLuxo.get(carrosDeLuxo.size()-1));

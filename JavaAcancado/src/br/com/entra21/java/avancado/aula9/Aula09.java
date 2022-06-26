@@ -2,9 +2,11 @@ package br.com.entra21.java.avancado.aula9;
 
 import java.util.ArrayList;
 import br.com.entra21.java.avancado.Aula;
+import br.com.entra21.java.avancado.aula9.annotation.Informacao;
+import br.com.entra21.java.avancado.aula9.annotation.Informacao.Informacoes;
 
+@Informacao(informacoes = Informacao.Informacoes.DONE, value = "Exercíco proposto pelo projeto Entra21")
 public class Aula09 extends Aula {
-
 
 	public Aula09(String titulo, ArrayList<String> assuntos) {
 		super(titulo, assuntos);
@@ -30,17 +32,9 @@ public class Aula09 extends Aula {
 		break;
 
 		case 4:
-
+		Data.praticingData();
 		break;
 		
-		case 5:
-
-		break;
-
-		case 6:
-
-		break;
-
 		}
 
 		return opcao;

@@ -1,4 +1,4 @@
-package br.com.entra21.java.avancado.aula9;
+package br.com.entra21.java.avancado.aula9.enuns;
 
 public enum Idioma {
 	

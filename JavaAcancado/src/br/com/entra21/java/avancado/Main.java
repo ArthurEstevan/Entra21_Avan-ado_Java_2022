@@ -65,7 +65,7 @@ public class Main {
 			break;
 
 			case 9:
-			new Aula09("Aula09 - Practice Each Subject", new ArrayList<String>(Arrays.asList("Wrapper", "ENUM", "Collections"))).aprender();
+			new Aula09("Aula09 - Practice Each Subject", new ArrayList<String>(Arrays.asList("Wrapper", "ENUM", "Collections", "Data"))).aprender();
 			break;
 
 			default:

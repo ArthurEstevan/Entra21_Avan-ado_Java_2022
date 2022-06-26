@@ -2,6 +2,10 @@ package br.com.entra21.java.avancado.aula9;
 
 import java.util.Scanner;
 
+import br.com.entra21.java.avancado.aula9.annotation.Informacao;
+import br.com.entra21.java.avancado.aula9.enuns.Idioma;
+
+@Informacao (informacoes = Informacao.Informacoes.DONE, value = "Conclusão do Uso de Enum")
 public class Enum {
 
 	public enum DiasDaSemana {

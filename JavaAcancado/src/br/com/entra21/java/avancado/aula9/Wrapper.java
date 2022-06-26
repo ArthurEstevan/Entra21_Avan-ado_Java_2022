@@ -1,5 +1,8 @@
 package br.com.entra21.java.avancado.aula9;
 
+import br.com.entra21.java.avancado.aula9.annotation.Informacao;
+
+@Informacao (informacoes = Informacao.Informacoes.DONE, value = "Conclusão do Uso de Wrapper")
 public class Wrapper {
 	
 	public static void practicingWrapper() {
