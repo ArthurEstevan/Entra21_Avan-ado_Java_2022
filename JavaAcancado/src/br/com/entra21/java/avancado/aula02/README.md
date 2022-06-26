@@ -15,7 +15,7 @@
   
 # _List - LinkedList_
 
-## _What is a ArrayList?_
+## _What is a LinkedList?_
 
 > LinkedList has a similar purpose to ArrayList, but it has specific methods for managing the list
 >
