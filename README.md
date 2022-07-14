@@ -22,8 +22,24 @@
 |Class_08|[Lambda expressions.](/JavaAcancado/src/br/com/entra21/java/avancado/aula08)
 |Class_09|[Lists with exercises.](/JavaAcancado/src/br/com/entra21/java/avancado/aula9)
 
-## Example Project 
+## 🎫 _Bonus_
 
-### This project covers all the subjects seen so far and can be used as an example:
+```yaml
+Learning first code in advanced java:
 
-[Example Project](https://github.com/TimeVerde/SistemaBancario)
+ArrayList<String> carrosDeLuxo = new ArrayList<String>();
+
+carrosDeLuxo.add("Bugatti Veyron Grand Sport");
+
+System.out.println(carrosDeLuxo);
+```
+
+## 📚 _References_ 
+
+> Sites where I got the exercises, I will also leave repositories to help you do the exercises.
+
+1. [Difficult exercises in advanced Java](https://oliota.com/curso_detalhe/entra21-31-05-2022-java-avancado/1653925541581) - scroll down to the bottom of the page 
+or click on nine
+2. [Teacher help repository](https://github.com/oliota/entra21-aulas-java-avancado)
+3. [Learning advanced Java](https://oliota.com/curso_detalhe/entra21-31-05-2022-java-avancado/1653925541581)
+4. [Example project using advanced Java](https://github.com/TimeVerde/SistemaBancario)
