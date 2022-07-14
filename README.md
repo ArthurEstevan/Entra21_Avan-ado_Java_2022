@@ -1,31 +1,26 @@
-# Entra21 Advanced Java
+# _Entra2️⃣1️⃣ Advanced Java_
 
-### Repository with practices carried out in class
+## _Repository with several subjects in advanced java_
 
->Practical content delivered in the classroom during the Entra21 project In additive learning opportunities in:
+> _Practical content carried out in the classroom during the Entra21 project._
 >
-> - Versioning
-> - Markdown Language
-> - Documentation
-
+> - **_Versioning - Versioning from GitHub_**
+> - **_Markdown language - Text Formatting_**
+> - **_Documentation - File Documentation_**
 
 ![Gif Entra21](/entra21.gif)
 
-## Class Taught
-
-<a href="#"><img align="center" src="./giphy.gif" width="400 " height="300" /></a>
-
-| Class | Subject |
+| CLASSES | SUBJECTS |
 |------|---------|
-|Aula 01 |[Classes Wrappers e ENUM](/JavaAcancado/src/br/com/entra21/java/avancado/aula01)  
-|Aula 02 |[Collections - List - ArrayList e LinkedList](/JavaAcancado/src/br/com/entra21/java/avancado/aula02)  
-|Aula 03 |[Trabalhando com Datas,Usando e criando anotações customizadas](/JavaAcancado/src/br/com/entra21/java/avancado/aula03)
-|Aula 04 |[Collections - Set - HashSet](/JavaAcancado/src/br/com/entra21/java/avancado/aula04)
-|Aula 05 |[Collections - Map - HashMap](/JavaAcancado/src/br/com/entra21/java/avancado/aula05)
-|Aula 06 |[Generics e prática com HashMap](/JavaAcancado/src/br/com/entra21/java/avancado/aula06)
-|Aula 07 |[Exceptions e tratamento de erros](/JavaAcancado/src/br/com/entra21/java/avancado/aula07)
-|Aula 08 |[Expressões Lambda](/JavaAcancado/src/br/com/entra21/java/avancado/aula08)
-|Aula 09 |[Prática com listas e exercicios](/JavaAcancado/src/br/com/entra21/java/avancado/aula9)
+|Class_01|[Wrappers and ENUM classes.](/JavaAcancado/src/br/com/entra21/java/avancado/aula01)  
+|Class_02|[Collections - ArrayList and LinkedList.](/JavaAcancado/src/br/com/entra21/java/avancado/aula02)  
+|Class_03|[Working with Dates and Creating Custom Annotations.](/JavaAcancado/src/br/com/entra21/java/avancado/aula03)
+|Class_04|[Collections - HashSet.](/JavaAcancado/src/br/com/entra21/java/avancado/aula04)
+|Class_05|[Collections - HashMap.](/JavaAcancado/src/br/com/entra21/java/avancado/aula05)
+|Class_06|[Learning generics and practice with HashMap.](/JavaAcancado/src/br/com/entra21/java/avancado/aula06)
+|Class_07|[Exceptions and error Handling.](/JavaAcancado/src/br/com/entra21/java/avancado/aula07)
+|Class_08|[Lambda expressions.](/JavaAcancado/src/br/com/entra21/java/avancado/aula08)
+|Class_09|[Lists with exercises.](/JavaAcancado/src/br/com/entra21/java/avancado/aula9)
 
 ## Example Project 
 
